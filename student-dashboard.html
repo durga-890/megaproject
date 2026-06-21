@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Aditya ScholarHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">ScholarHub</div>
+        
+        <button class="subject-btn" onclick="showMentors('BSc - Computer Science')">BSc - Computer Science</button>
+        <button class="subject-btn" onclick="showMentors('BSc - Data Science')">BSc - Data Science</button>
+        <button class="subject-btn" onclick="showMentors('BSc - Artificial Intelligence')">BSc - AI</button>
+        <button class="subject-btn" onclick="showMentors('BSc - Chemistry')">BSc - Chemistry</button>
+        <button class="subject-btn" onclick="showMentors('BCA (Gen & Data Science)')">BCA DS</button>
+        <button class="subject-btn" onclick="showMentors('BCom')">BCom</button>
+        <button class="subject-btn" onclick="showMentors('BBA')">BBA</button>
+    </div>
+
+    <div class="mentors-section" id="mentorsSection">
+        <div class="section-title">Select a Mentor</div>
+        <div id="mentorsList">
+            </div>
+    </div>
+
+    <div class="welcome-msg" id="welcomeMsg">
+        <h2>Welcome to Aditya ScholarHub</h2>
+        <p>Select your course from the left to ask doubts to your respective teachers.</p>
+    </div>
+
+    <div class="chat-section" id="chatSection">
+        <div class="chat-header">
+            <div class="mentor-avatar" id="activeMentorAvatar">M</div>
+            <span id="activeMentorName">Mentor Name</span>
+        </div>
+        
+        <div class="chat-body" id="chatBody">
+            </div>
+
+        <div class="chat-footer">
+            <div class="input-group">
+                <button class="img-btn" onclick="alert('Image upload box will open here!')">➕ Image</button>
+                <textarea class="doubt-box" placeholder="Type your doubt here..." id="doubtText"></textarea>
+                <button class="send-btn" onclick="sendDoubt()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

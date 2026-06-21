@@ -1,0 +1,166 @@
+/* Base Layout Configurations */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80') center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Watermark Styling */
+.bg-watermark {
+    position: absolute;
+    font-size: 6vw;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: 0;
+    text-align: center;
+    pointer-events: none;
+    letter-spacing: 10px;
+    white-space: nowrap;
+}
+
+/* Authentication Card Container with Glassmorphism */
+.login-container {
+    width: 420px;
+    height: 520px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.brand-logo {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.brand-subtext {
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* Form Switching Controls */
+.toggle-box {
+    width: 240px;
+    margin: 20px auto 35px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.1);
+    border-radius: 30px;
+    display: flex;
+    background-color: #f1f5f9;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #334155;
+    z-index: 5;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background: #06b6d4;
+    border-radius: 30px;
+    transition: .5s;
+    z-index: 1;
+}
+
+/* Form Slide Animation Container */
+.form-box {
+    position: relative;
+    height: 300px;
+}
+
+.input-group {
+    position: absolute;
+    width: 100%;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#loginForm { left: 0; }
+#signupForm { left: 450px; }
+
+/* Form Fields Customization */
+.input-field {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    background-color: #f8fafc;
+    transition: 0.3s;
+}
+
+.input-field:focus {
+    border-color: #06b6d4;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
+
+.role-selector {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+    font-weight: 500;
+    color: #475569;
+}
+
+.role-selector label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #06b6d4;
+    transform: translateY(-2px);
+}
